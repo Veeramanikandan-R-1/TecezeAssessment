@@ -1,0 +1,69 @@
+@import "../../App.scss";
+
+.section-container{
+    background: $primary-background;
+    color: $primary-white;
+
+    .sec-title{
+        font-size: 20px;
+        padding: 25px 75px;
+
+        h4::after {
+            display: inline-block;
+            content: "";
+            border-top: .2rem solid $primary-white;
+            width: 8rem;
+            margin: 0 1rem;
+            transform: translateY(-0.2rem);
+        }
+    }
+
+    .sub-sec-cotainer{
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 10vw;
+        padding: 50px 0px;
+
+        .sec-image{
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .sec-text{
+            font-weight: bold;
+            font-size: 30px;
+            width: 50vw;
+            margin-bottom: 20px;
+        }
+        .sec-subText{
+            width: 50vw;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:480px){
+    #why-choose-us{
+        .sec-text, .sec-subText{
+            width: auto !important;
+        }
+        .sub-sec-cotainer{
+            flex-direction: column !important;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 10px;
+            padding-top: 5px;
+        }
+        .text-content{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

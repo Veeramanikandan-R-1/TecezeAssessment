@@ -1,0 +1,224 @@
+@import "../../App.scss";
+
+.first-section-container{
+    background-color: $primary-dark;
+    width: 100%;
+    min-height: 100vh;
+    color: $primary-white;
+    .nav-container{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        z-index: 10;
+        .nav-bar{
+            background-color: $primary-dark;
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            .logo{
+                font-weight: bold;
+                font-size: 20px;
+                width: 20vw;
+                margin-left: 50px;
+                margin-right: 15vw;
+                img{
+                    width: 90px;
+                }
+                a{
+                    color: $primary-white;
+                    text-decoration: none;
+                    width: 10%;
+                }
+
+                &:hover{
+                    color: $primary-green;
+                    cursor: pointer;
+                }
+            }
+            .nav-links{
+                width: 80vw;
+                margin-left: 100px;
+                display: flex;
+                align-items: center;
+                a{
+                    color: $primary-white;
+                    text-decoration: none;
+                    margin: 10px 25px;
+                }
+                a:hover{
+                    color: $primary-green;
+                }
+                button{
+                    float: right;
+                    margin-left: 5vw;
+                }
+            }
+
+        }
+        .small-nav{
+            display: none;
+        }
+    }
+
+    .hero-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .hero-text{
+            text-align: center;
+            align-self: center;
+            width: 70vw;
+            margin-top: 15vh;
+            margin-bottom: 30px;
+            font-size: 60px;
+            span{
+                color: $primary-green;
+            }
+        }
+    }
+    .sub-text{
+        margin: auto;
+        text-align: center;
+        width: 450px;
+    }
+
+    .start-button-container{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .trust-quote{
+        text-align: center;
+        font-weight: bold;
+        p::before,
+        p::after {
+            display: inline-block;
+            content: "";
+            border-top: .2rem solid $primary-green;
+            width: 3rem;
+            margin: 0 1rem;
+            transform: translateY(-0.2rem);
+        }
+    }
+
+
+    .companies{
+        margin: 0 auto;
+        padding: 20px;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primary-background;
+        margin-top: 20px;
+        border-radius: 5px;
+        color: $primary-white;
+        flex-wrap: wrap;
+        p{
+            width: 100px;
+            margin: 5px 35px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .hero-text{
+        margin-top: 25vh !important;
+        font-size: 30px !important;
+    }
+
+    .logo{
+        margin-right: 10px !important;
+    }
+
+    .nav-links{
+        button{
+            margin-left: 10px !important;
+        }
+        a{
+            margin: 10px !important;
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .nav-container{
+        position: relative;
+        .nav-links{
+            display: none !important;
+        }   
+        .small-nav{
+            position: absolute;
+            display: block !important;
+            color: $primary-white;
+            position: absolute;
+            margin: 15px;
+            top: 0;
+            right: 0;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .nav-link-moblie{
+            position: absolute;
+            top: 0 !important;
+            left: 30 !important;
+            margin: 100px;
+            margin-top: 70px;
+            // height: 100px;
+            width: 200px;
+            background-color: $primary-background;
+            border-radius: 5px;
+            font-size: 14px !important;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            a{
+                text-decoration: none;
+                color: $primary-white;
+                margin: 5px;
+            }
+        }
+    }
+    .first-section-container{
+        height: auto !important;
+        padding-bottom: 20px;
+        .hero-container{
+            height: auto !important;
+        }
+        .hero-text{
+            width: auto !important;
+            margin-top: 100px !important;
+            font-size: 20px !important;
+            margin: 100px 100px 20px 100px!important;
+        }
+        .sub-text{
+            width: auto !important;
+            margin: 20px 20px 20px 40px !important;
+        }
+    }
+    .companies{
+        padding: 10px;
+        flex-wrap: wrap;
+        height: auto !important;
+        gap: 10px !important;
+        p{
+            margin: 5px !important;
+            border: 1px solid grey;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    .trust-quote{
+        text-align: center;
+        font-weight: bold;
+        p::before,
+        p::after {
+            display: none !important;
+        }
+    }
+}
