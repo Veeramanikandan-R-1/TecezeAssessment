@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.scss'
-import image4 from "../assets/image4Testimonial.png"
+import image4 from "../../assets/image4Testimonial.png"
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
